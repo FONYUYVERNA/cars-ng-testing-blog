@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploratory Testing Deep Dive: Cars.ng User Experience</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .metadata {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+        
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        code {
+            background-color: #f7f7f7;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Exploratory Testing Deep Dive: Cars.ng User Experience</h1>
+        <div class="metadata">
+            Published on February 8, 2025 | By Fonyuy Verena Monyuyta-ah<br>
+            Testing & Quality Assurance
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>As part of a comprehensive quality assurance initiative, I recently conducted an in-depth exploratory testing session on <a href="https://cars.ng">Cars.ng</a>, Nigeria's automotive marketplace platform. This analysis focused on core user journeys and uncovered several critical areas for improvement that could enhance the overall user experience.</p>
+        </div>
+
+        <div class="section">
+            <h2>Testing Methodology</h2>
+            <p>My approach involved systematic testing of key user flows using Microsoft Edge v132.0.2957.127 on Windows 10. The testing strategy focused on:</p>
+            <ul>
+                <li>Form interactions and validation</li>
+                <li>Search functionality and filters</li>
+                <li>Navigation and user interface elements</li>
+                <li>Security and performance aspects</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Key Findings</h2>
+            <h3>Frontend Issues</h3>
+            <p>The testing revealed several significant frontend challenges that impact user experience:</p>
+            <ol>
+                <li>
+                    <strong>Form Validation Conflicts:</strong> Multiple form elements with duplicate IDs were discovered, particularly in the contact forms. This creates potential conflicts during form submission and impacts user ability to contact sellers effectively.
+                </li>
+                <li>
+                    <strong>Search Functionality Problems:</strong> The dealer listing search feature exhibited JavaScript errors when combining location and brand filters, preventing users from finding relevant listings.
+                </li>
+                <li>
+                    <strong>Filter System Inconsistencies:</strong> Advanced search combinations, particularly for luxury vehicles with specific criteria, showed unexpected behavior and often returned incorrect or no results.
+                </li>
+            </ol>
+
+            <h3>Technical Infrastructure</h3>
+            <p>Several technical issues were identified that affect platform stability and security:</p>
+            <ol>
+                <li>
+                    <strong>Cookie Security Gaps:</strong> The platform's cookie implementation lacks secure flags, potentially exposing user data to security risks.
+                </li>
+                <li>
+                    <strong>Cache Management:</strong> Missing cache-control headers on static resources could impact loading performance and user experience.
+                </li>
+                <li>
+                    <strong>Accessibility Concerns:</strong> Multiple car images lack proper alt text attributes, making the platform less accessible to users relying on screen readers.
+                </li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Impact Analysis</h2>
+            <h3>1. User Experience Impact</h3>
+            <ul>
+                <li>Frustrated user journeys due to form submission issues</li>
+                <li>Incomplete or incorrect search results</li>
+                <li>Potential loss of leads due to contact form problems</li>
+            </ul>
+
+            <h3>2. Technical Impact</h3>
+            <ul>
+                <li>JavaScript errors affecting core functionality</li>
+                <li>Performance implications due to caching issues</li>
+                <li>Security vulnerabilities in cookie handling</li>
+            </ul>
+
+            <h3>3. Accessibility Impact</h3>
+            <ul>
+                <li>Reduced platform usability for users with disabilities</li>
+                <li>Non-compliance with basic web accessibility standards</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Recommendations</h2>
+            <p>Based on the testing results, here are key recommendations for improvement:</p>
+            <ol>
+                <li>Implement a comprehensive frontend audit to identify and resolve all duplicate ID issues</li>
+                <li>Enhance the search functionality with proper error handling and validation</li>
+                <li>Review and update security configurations, particularly regarding cookie settings</li>
+                <li>Implement proper cache control mechanisms for static resources</li>
+                <li>Conduct an accessibility audit and implement necessary improvements</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Conclusion</h2>
+            <p>While <a href="https://cars.ng">Cars.ng</a> provides essential functionality for the Nigerian automotive market, addressing these identified issues would significantly enhance the platform's reliability, security, and user experience. The findings from this exploratory testing provide a clear roadmap for improvements that could elevate the platform's overall quality and user satisfaction.</p>
+            <p><a href="https://docs.google.com/spreadsheets/d/1HrDCvqa43dhqlC9VrCIQ9AjuyXotKkhXyWhTFOehiTo/edit?usp=sharing">View Complete Bug Report</a></p>
+        </div>
+    </div>
+</body>
+</html>
